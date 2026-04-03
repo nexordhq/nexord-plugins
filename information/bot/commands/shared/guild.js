@@ -1,5 +1,5 @@
 const { ChannelType, GuildVerificationLevel } = require("discord.js");
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 const moment = require("moment");
 
 /**

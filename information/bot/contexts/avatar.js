@@ -2,7 +2,7 @@ const { ApplicationCommandType } = require("discord.js");
 const avatarInfo = require("../commands/shared/avatar");
 
 /**
- * @type {import('strange-sdk').ContextType}
+ * @type {import('nexord-sdk').ContextType}
  */
 module.exports = {
     name: "avatar",

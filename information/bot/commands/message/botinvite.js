@@ -1,7 +1,7 @@
 const botinvite = require("../shared/botinvite");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "botinvite",

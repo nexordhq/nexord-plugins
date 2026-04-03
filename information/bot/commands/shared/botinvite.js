@@ -1,5 +1,5 @@
 const { ButtonBuilder, ActionRowBuilder, ButtonStyle } = require("discord.js");
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 
 module.exports = async ({ client, guild }) => {
     const coreConfig = await client.pluginManager.getPlugin("core").getConfig();

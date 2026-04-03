@@ -1,10 +1,10 @@
 const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
-const { MiscUtils } = require("strange-sdk/utils");
+const { MiscUtils } = require("nexord-sdk/utils");
 const { buildGreeting } = require("../utils");
 const db = require("../../db.service");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "farewell",

@@ -9,14 +9,14 @@ const {
     ComponentType,
 } = require("discord.js");
 const { getCommandUsage, getSlashUsage } = require("../handler");
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 const db = require("../../db.service");
 
 const CMDS_PER_PAGE = 5;
 const IDLE_TIMEOUT = 30;
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "help",

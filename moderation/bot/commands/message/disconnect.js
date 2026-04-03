@@ -1,7 +1,7 @@
 const disconnect = require("../shared/disconnect");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "disconnect",

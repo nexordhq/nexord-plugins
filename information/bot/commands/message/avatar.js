@@ -1,7 +1,7 @@
 const avatarInfo = require("../shared/avatar");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "avatar",

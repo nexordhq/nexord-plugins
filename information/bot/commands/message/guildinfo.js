@@ -1,7 +1,7 @@
 const guildInfo = require("../shared/guild");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "guildinfo",

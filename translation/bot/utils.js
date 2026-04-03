@@ -1,5 +1,5 @@
 const ISO6391 = require("iso-639-1");
-const { Logger } = require("strange-sdk/utils");
+const { Logger } = require("nexord-sdk/utils");
 const { translate: gTranslate } = require("@vitalets/google-translate-api");
 
 async function translate(content, outputCode) {

@@ -1,4 +1,4 @@
-const { DashboardPlugin } = require("strange-sdk");
+const { DashboardPlugin } = require("nexord-sdk");
 
 module.exports = new DashboardPlugin({
     icon: "fa-solid fa-language",

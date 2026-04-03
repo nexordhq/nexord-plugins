@@ -1,4 +1,4 @@
-const { BotUtils, EmbedUtils } = require("strange-sdk/utils");
+const { BotUtils, EmbedUtils } = require("nexord-sdk/utils");
 const plugin = require("../index");
 
 /**

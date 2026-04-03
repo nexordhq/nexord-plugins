@@ -1,5 +1,5 @@
 const { ChannelType } = require("discord.js");
-const { EmbedUtils, channelTypes } = require("strange-sdk/utils");
+const { EmbedUtils, channelTypes } = require("nexord-sdk/utils");
 const { stripIndent } = require("common-tags");
 
 /**

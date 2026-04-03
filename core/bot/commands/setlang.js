@@ -1,17 +1,17 @@
 const { ApplicationCommandOptionType } = require("discord.js");
-const { Logger } = require("strange-sdk/utils");
+const { Logger } = require("nexord-sdk/utils");
 const db = require("../../db.service");
 
 let langChoices = [];
 try {
-    const { languagesMeta } = require("strange-core");
+    const { languagesMeta } = require("nexord-core");
     langChoices = languagesMeta.map((lang) => ({ name: lang.name, value: lang.name }));
 } catch (error) {
     Logger.debug("Missing languages-meta.json", error);
 }
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "setlang",

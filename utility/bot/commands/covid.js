@@ -1,9 +1,9 @@
 const { ApplicationCommandOptionType } = require("discord.js");
-const { HttpUtils, EmbedUtils } = require("strange-sdk/utils");
+const { HttpUtils, EmbedUtils } = require("nexord-sdk/utils");
 const timestampToDate = require("timestamp-to-date");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "covid",

@@ -5,7 +5,7 @@ const {
     ButtonStyle,
     ChannelType,
 } = require("discord.js");
-const { Logger } = require("strange-sdk/utils");
+const { Logger } = require("nexord-sdk/utils");
 const ShortUniqueId = require("short-unique-id");
 const uid = new ShortUniqueId({ length: 8 });
 const db = require("../db.service");

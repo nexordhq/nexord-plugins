@@ -5,7 +5,7 @@ const transfer = require("./sub/transfer");
 const withdraw = require("./sub/withdraw");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "bank",

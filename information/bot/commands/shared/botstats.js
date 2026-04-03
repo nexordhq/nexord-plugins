@@ -1,5 +1,5 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { MiscUtils, EmbedUtils } = require("strange-sdk/utils");
+const { MiscUtils, EmbedUtils } = require("nexord-sdk/utils");
 const { stripIndent } = require("common-tags");
 
 /**

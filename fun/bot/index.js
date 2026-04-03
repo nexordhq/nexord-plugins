@@ -1,4 +1,4 @@
-const { BotPlugin } = require("strange-sdk");
+const { BotPlugin } = require("nexord-sdk");
 const { DiscordTogether } = require("discord-together");
 
 module.exports = new BotPlugin({

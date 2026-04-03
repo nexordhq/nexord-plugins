@@ -1,6 +1,6 @@
 const { approveSuggestion, rejectSuggestion } = require("../utils");
 const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
-const { MiscUtils } = require("strange-sdk/utils");
+const { MiscUtils } = require("nexord-sdk/utils");
 const db = require("../../db.service");
 
 const CHANNEL_PERMS = [
@@ -12,7 +12,7 @@ const CHANNEL_PERMS = [
 ];
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "suggestion",

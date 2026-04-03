@@ -5,12 +5,12 @@
     "author": "Sai Teja Madha",
     "license": "ISC",
     "dependencies": {
-        "discord-giveaways": "github:strange-bot/discord-giveaways",
+        "discord-giveaways": "github:nexordhq/discord-giveaways",
         "enhanced-ms": "^2.3.0"
     },
     "peerDependencies": {
         "discord.js": "^14.19.0",
         "express": "^4.21.2",
-        "strange-sdk": "workspace:*"
+        "nexord-sdk": "workspace:*"
     }
 }

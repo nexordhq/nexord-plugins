@@ -1,7 +1,7 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 const { isValidEmoji, getLanguagesFromEmoji } = require("country-emoji-languages");
 const { translate } = require("../utils");
-const { MiscUtils, EmbedUtils } = require("strange-sdk/utils");
+const { MiscUtils, EmbedUtils } = require("nexord-sdk/utils");
 const data = require("../../data.json");
 const db = require("../../db.service");
 

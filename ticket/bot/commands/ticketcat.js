@@ -13,7 +13,7 @@ const {
 const db = require("../../db.service");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "ticketcat",

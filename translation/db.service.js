@@ -1,4 +1,4 @@
-const { DBService, Schema } = require("strange-sdk");
+const { DBService, Schema } = require("nexord-sdk");
 
 const TRANSLATE_COOLDOWN = 120;
 

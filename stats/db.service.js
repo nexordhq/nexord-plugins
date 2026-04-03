@@ -1,4 +1,4 @@
-const { DBService, Schema } = require("strange-sdk");
+const { DBService, Schema } = require("nexord-sdk");
 const ReqString = { type: String, required: true };
 const DefaultBoolean = { type: Boolean, default: false };
 

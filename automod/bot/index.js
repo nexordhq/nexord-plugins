@@ -1,4 +1,4 @@
-const { BotPlugin } = require("strange-sdk");
+const { BotPlugin } = require("nexord-sdk");
 const { cleanupCache } = require("./utils");
 
 module.exports = new BotPlugin({

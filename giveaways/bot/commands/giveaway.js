@@ -9,7 +9,7 @@ const {
     ButtonStyle,
     ApplicationCommandOptionType,
 } = require("discord.js");
-const { MiscUtils } = require("strange-sdk/utils");
+const { MiscUtils } = require("nexord-sdk/utils");
 
 // Sub Commands
 const start = require("./sub/start");
@@ -21,7 +21,7 @@ const list = require("./sub/list");
 const edit = require("./sub/edit");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "giveaway",

@@ -1,10 +1,10 @@
 const { ApplicationCommandOptionType } = require("discord.js");
-const { MiscUtils } = require("strange-sdk/utils");
+const { MiscUtils } = require("nexord-sdk/utils");
 const botInvite = require("../shared/botinvite");
 const botstats = require("../shared/botstats");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "bot",

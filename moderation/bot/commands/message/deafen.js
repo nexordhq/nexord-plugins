@@ -1,7 +1,7 @@
 const deafen = require("../shared/deafen");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "deafen",

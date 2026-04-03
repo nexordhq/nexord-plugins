@@ -1,4 +1,4 @@
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 const db = require("../../../db.service");
 
 module.exports = async (guild, user) => {

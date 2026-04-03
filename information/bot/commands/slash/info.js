@@ -7,7 +7,7 @@ const botInfo = require("../shared/botstats");
 const { ApplicationCommandOptionType } = require("discord.js");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "info",

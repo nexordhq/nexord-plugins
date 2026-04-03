@@ -1,7 +1,7 @@
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "ping",

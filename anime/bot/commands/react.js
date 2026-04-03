@@ -1,5 +1,5 @@
 const { EmbedBuilder, ApplicationCommandOptionType } = require("discord.js");
-const { HttpUtils, EmbedUtils } = require("strange-sdk/utils");
+const { HttpUtils, EmbedUtils } = require("nexord-sdk/utils");
 
 const NekosLife = require("nekos.life");
 const neko = new NekosLife();
@@ -7,7 +7,7 @@ const neko = new NekosLife();
 const choices = ["hug", "kiss", "cuddle", "feed", "pat", "poke", "slap", "smug", "tickle", "wink"];
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "react",

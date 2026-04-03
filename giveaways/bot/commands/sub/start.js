@@ -1,6 +1,6 @@
 const { ChannelType } = require("discord.js");
 const ems = require("enhanced-ms");
-const { MiscUtils } = require("strange-sdk/utils");
+const { MiscUtils } = require("nexord-sdk/utils");
 
 const SETUP_PERMS = ["ViewChannel", "SendMessages", "EmbedLinks"];
 

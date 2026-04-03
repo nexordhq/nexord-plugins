@@ -1,5 +1,5 @@
 const { EmbedBuilder, AttachmentBuilder, ApplicationCommandOptionType } = require("discord.js");
-const { HttpUtils } = require("strange-sdk/utils");
+const { HttpUtils } = require("nexord-sdk/utils");
 const { getImageFromMessage } = require("../utils");
 const plugin = require("../index");
 
@@ -32,7 +32,7 @@ const availableGenerators = [
 ];
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "generator",

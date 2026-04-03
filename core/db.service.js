@@ -1,4 +1,4 @@
-const { DBService, Schema } = require("strange-sdk");
+const { DBService, Schema } = require("nexord-sdk");
 
 class CoreService extends DBService {
     constructor() {

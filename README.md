@@ -1,4 +1,4 @@
-This repository contains plugins for the Strange Bot solution.
+This repository contains plugins for the Nexord Bot solution.
 
 # Official Plugins
 

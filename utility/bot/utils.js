@@ -1,5 +1,5 @@
 const sourcebin = require("sourcebin_js");
-const { Logger } = require("strange-sdk/utils");
+const { Logger } = require("nexord-sdk/utils");
 
 /**
  * Posts the provided content to the BIN

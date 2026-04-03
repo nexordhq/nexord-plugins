@@ -1,7 +1,7 @@
 const userInfo = require("../shared/user");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "userinfo",

@@ -1,5 +1,5 @@
 const { EmbedBuilder, GuildMember } = require("discord.js");
-const { MiscUtils, Logger } = require("strange-sdk/utils");
+const { MiscUtils, Logger } = require("nexord-sdk/utils");
 const db = require("../db.service");
 const plugin = require("./index");
 

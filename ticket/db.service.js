@@ -1,4 +1,4 @@
-const { DBService, Schema } = require("strange-sdk");
+const { DBService, Schema } = require("nexord-sdk");
 const reqString = { type: String, required: true };
 
 class TicketService extends DBService {

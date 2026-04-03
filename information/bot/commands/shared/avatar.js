@@ -1,4 +1,4 @@
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 
 /**
  * @param {import("discord.js").Guild} guild

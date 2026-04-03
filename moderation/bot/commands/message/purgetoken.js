@@ -1,7 +1,7 @@
 const { purgeMessages } = require("../../utils");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "purgetoken",

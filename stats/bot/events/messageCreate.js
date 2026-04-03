@@ -1,4 +1,4 @@
-const { MiscUtils } = require("strange-sdk/utils");
+const { MiscUtils } = require("nexord-sdk/utils");
 const db = require("../../db.service");
 
 const cooldownCache = new Map();

@@ -1,7 +1,7 @@
 const vunmute = require("../shared/vunmute");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "vunmute",

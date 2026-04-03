@@ -1,9 +1,9 @@
 const { ApplicationCommandOptionType } = require("discord.js");
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 const db = require("../../db.service");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "stats",

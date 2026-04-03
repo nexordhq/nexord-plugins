@@ -1,4 +1,4 @@
-const { MiscUtils, Logger, EmbedUtils } = require("strange-sdk/utils");
+const { MiscUtils, Logger, EmbedUtils } = require("nexord-sdk/utils");
 const { antispamCache, MESSAGE_SPAM_THRESHOLD, shouldModerate } = require("../utils");
 const db = require("../../db.service");
 

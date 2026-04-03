@@ -1,5 +1,5 @@
 const { parseEmoji } = require("discord.js");
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 const { stripIndent } = require("common-tags");
 
 module.exports = (guild, emoji) => {

@@ -1,12 +1,12 @@
 const { ApplicationCommandOptionType, MessageFlags } = require("discord.js");
-const { MiscUtils, EmbedUtils } = require("strange-sdk/utils");
+const { MiscUtils, EmbedUtils } = require("nexord-sdk/utils");
 
 const cooldownCache = new Map();
 const OWNER_IDS = process.env.OWNER_IDS?.split(",").map((id) => id.trim());
 
 /**
  * @param {import('discord.js').Message} message
- * @param {import('strange-sdk').CommandType} cmd
+ * @param {import('nexord-sdk').CommandType} cmd
  * @param {string} prefix
  */
 async function handlePrefixCommand(message, cmd, prefix) {
@@ -84,7 +84,7 @@ async function handlePrefixCommand(message, cmd, prefix) {
 
 /**
  * @param {import('discord.js').ChatInputCommandInteraction} interaction
- * @param {import('strange-sdk').CommandType} cmd
+ * @param {import('nexord-sdk').CommandType} cmd
  */
 async function handleSlashCommand(interaction, cmd) {
     const guild = interaction.guild;
@@ -164,7 +164,7 @@ async function handleSlashCommand(interaction, cmd) {
 /**
  * Build a usage embed for this command
  * @param {import('discord.js').Guild} guild - guild object
- * @param {import('strange-sdk').CommandType} cmd - command object
+ * @param {import('nexord-sdk').CommandType} cmd - command object
  * @param {string} prefix - guild bot prefix
  * @param {string} invoke - alias that was used to trigger this command
  * @param {string} [title] - the embed title
@@ -191,7 +191,7 @@ function getCommandUsage(guild, cmd, prefix, invoke, title = "Usage") {
 
 /**
  * @param {import('discord.js').Guild} guild - guild object
- * @param {import('strange-sdk').CommandType} cmd - command object
+ * @param {import('nexord-sdk').CommandType} cmd - command object
  */
 function getSlashUsage(guild, cmd) {
     let desc = "";
@@ -215,7 +215,7 @@ function getSlashUsage(guild, cmd) {
 
 /**
  * @param {import('discord.js').ContextMenuCommandInteraction} interaction
- * @param {import('strange-sdk').ContextType} context
+ * @param {import('nexord-sdk').ContextType} context
  */
 async function handleContext(interaction, context) {
     const guild = interaction.guild;

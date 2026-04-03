@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
 const ems = require("enhanced-ms");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "timeout",

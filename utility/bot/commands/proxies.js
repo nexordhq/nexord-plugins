@@ -1,10 +1,10 @@
 const { AttachmentBuilder, ApplicationCommandOptionType } = require("discord.js");
-const { HttpUtils } = require("strange-sdk/utils");
+const { HttpUtils } = require("nexord-sdk/utils");
 
 const PROXY_TYPES = ["all", "http", "socks4", "socks5"];
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "proxies",

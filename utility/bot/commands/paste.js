@@ -3,7 +3,7 @@ const { stripIndent } = require("common-tags");
 const { postToBin } = require("../utils");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "paste",

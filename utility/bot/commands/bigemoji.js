@@ -1,11 +1,11 @@
 const { parseEmoji, ApplicationCommandOptionType } = require("discord.js");
 const { parse } = require("twemoji-parser");
-const { EmbedUtils } = require("strange-sdk/utils");
+const { EmbedUtils } = require("nexord-sdk/utils");
 
 const BASE_URL = "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/";
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "bigemoji",

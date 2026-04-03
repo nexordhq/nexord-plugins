@@ -77,7 +77,7 @@ The plugin supports multiple languages through locale files:
 
 - discord.js ^14.19.0
 - express ^4.21.2
-- strange-sdk (workspace)
+- nexord-sdk (workspace)
 
 ## Owner Only
 

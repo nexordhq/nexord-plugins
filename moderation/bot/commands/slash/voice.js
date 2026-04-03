@@ -7,7 +7,7 @@ const move = require("../shared/move");
 const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
 
 /**
- * @type {import('strange-sdk').CommandType}
+ * @type {import('nexord-sdk').CommandType}
  */
 module.exports = {
     name: "voice",
