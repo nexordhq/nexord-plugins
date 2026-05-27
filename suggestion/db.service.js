@@ -78,7 +78,10 @@ class SuggestionService extends DBService {
     }
 
     async findSuggestion(guildId, messageId) {
-        return this.getModel("logs").findOne({ guild_id: guildId, message_id: messageId });
+        return this.getModel("logs").findOne({
+            guild_id: guildId,
+            message_id: messageId,
+        });
     }
 
     async deleteSuggestionDb(guildId, messageId, memberId, reason) {

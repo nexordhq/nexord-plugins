@@ -52,8 +52,9 @@ async function paste({ guild }, content, title) {
     const response = await postToBin(content, title);
     if (!response) return guild.getT("utility:PASTE.ERROR");
 
-    const embed = new EmbedBuilder().setAuthor({ name: "utility:PASTE.EMBED_TITLE" })
-        .setDescription(stripIndent`
+    const embed = new EmbedBuilder().setAuthor({
+        name: "utility:PASTE.EMBED_TITLE",
+    }).setDescription(stripIndent`
     🔸 ${guild.getT("utility:PASTE.NORMAL")}: ${response.url}
     🔹 ${guild.getT("utility:PASTE.RAW")}: ${response.raw}
   `);

@@ -107,10 +107,18 @@ const logModeration = async (issuer, target, reason, type, data = {}) => {
                 inline: false,
             });
         } else {
-            fields.push({ name: "User", value: `${target.tag} [${target.id}]`, inline: false });
+            fields.push({
+                name: "User",
+                value: `${target.tag} [${target.id}]`,
+                inline: false,
+            });
         }
 
-        fields.push({ name: "Reason", value: reason || "No reason provided", inline: false });
+        fields.push({
+            name: "Reason",
+            value: reason || "No reason provided",
+            inline: false,
+        });
 
         if (type.toUpperCase() === "TIMEOUT") {
             fields.push({

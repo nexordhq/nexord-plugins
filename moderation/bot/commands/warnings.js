@@ -119,7 +119,9 @@ async function listWarnings(target, { guild, guildId }) {
         .lean();
 
     if (!warnings.length) {
-        return guild.getT("moderation:WARNINGS.NO_WARNINGS", { target: target.user.username });
+        return guild.getT("moderation:WARNINGS.NO_WARNINGS", {
+            target: target.user.username,
+        });
     }
 
     const acc = warnings
@@ -150,5 +152,7 @@ async function clearWarnings(target, { guild, guildId }) {
         },
         { deleted: true },
     );
-    return guild.getT("moderation:WARNINGS.WARN_CLEAR", { target: target.user.username });
+    return guild.getT("moderation:WARNINGS.WARN_CLEAR", {
+        target: target.user.username,
+    });
 }

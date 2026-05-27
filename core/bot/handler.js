@@ -246,7 +246,9 @@ async function handleContext(interaction, context) {
     }
 
     try {
-        await interaction.deferReply({ flags: context.ephemeral ? MessageFlags.Ephemeral : 0 });
+        await interaction.deferReply({
+            flags: context.ephemeral ? MessageFlags.Ephemeral : 0,
+        });
         await context.run({ interaction });
     } catch (ex) {
         interaction.followUpT("core:HANDLER.ERROR");

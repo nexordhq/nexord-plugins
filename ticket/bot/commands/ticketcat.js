@@ -374,7 +374,9 @@ async function configCategory(arg0, settings, category) {
             if (roleAdd) {
                 if (!modal.guild.roles.cache.has(roleAdd)) {
                     return modal.followUp(
-                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", { role: roleAdd }),
+                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", {
+                            role: roleAdd,
+                        }),
                     );
                 }
                 if (!cat.member_roles.includes(roleAdd)) cat.member_roles.push(roleAdd);
@@ -383,7 +385,9 @@ async function configCategory(arg0, settings, category) {
             if (roleRemove) {
                 if (!modal.guild.roles.cache.has(roleRemove)) {
                     return modal.followUp(
-                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", { role: roleRemove }),
+                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", {
+                            role: roleRemove,
+                        }),
                     );
                 }
                 cat.member_roles.splice(cat.member_roles.indexOf(roleRemove), 1);
@@ -401,7 +405,9 @@ async function configCategory(arg0, settings, category) {
             if (roleAdd) {
                 if (!modal.guild.roles.cache.has(roleAdd)) {
                     return modal.followUp(
-                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", { role: roleAdd }),
+                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", {
+                            role: roleAdd,
+                        }),
                     );
                 }
                 if (!cat.staff_roles.includes(roleAdd)) cat.staff_roles.push(roleAdd);
@@ -410,7 +416,9 @@ async function configCategory(arg0, settings, category) {
             if (roleRemove) {
                 if (!modal.guild.roles.cache.has(roleRemove)) {
                     return modal.followUp(
-                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", { role: roleRemove }),
+                        guild.getT("ticket:CATEGORY.CONFIG_ROLE_NOT_EXIST", {
+                            role: roleRemove,
+                        }),
                     );
                 }
                 cat.staff_roles.splice(cat.staff_roles.indexOf(roleRemove), 1);

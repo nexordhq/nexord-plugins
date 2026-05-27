@@ -5,7 +5,10 @@ const db = require("../../db.service");
 let langChoices = [];
 try {
     const { languagesMeta } = require("nexord-core");
-    langChoices = languagesMeta.map((lang) => ({ name: lang.name, value: lang.name }));
+    langChoices = languagesMeta.map((lang) => ({
+        name: lang.name,
+        value: lang.name,
+    }));
 } catch (error) {
     Logger.debug("Missing languages-meta.json", error);
 }

@@ -65,5 +65,8 @@ async function getProxies({ guild }, type) {
     const attachment = new AttachmentBuilder(response.buffer, {
         name: `${type.toLowerCase()}_proxies.txt`,
     });
-    return { content: guild.getT("utility:PROXIES.SUCCESS"), files: [attachment] };
+    return {
+        content: guild.getT("utility:PROXIES.SUCCESS"),
+        files: [attachment],
+    };
 }

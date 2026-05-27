@@ -62,6 +62,8 @@ async function kick(issuer, target, reason) {
     if (response === "BOT_PERM")
         return guild.getT("moderation:KICK.BOT_PERM", { target: target.username });
     else if (response === "MEMBER_PERM")
-        return guild.getT("moderation:KICK.MEMBER_PERM", { target: target.username });
+        return guild.getT("moderation:KICK.MEMBER_PERM", {
+            target: target.username,
+        });
     else return guild.getT("moderation:KICK.FAILED", { target: target.username });
 }

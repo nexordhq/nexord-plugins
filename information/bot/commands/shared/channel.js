@@ -53,7 +53,9 @@ module.exports = (channel) => {
 
     const embed = EmbedUtils.embed()
         .setAuthor({
-            name: guild.getT("information:INFO.CHANNEL_EMBED_TITLE", { channel: name }),
+            name: guild.getT("information:INFO.CHANNEL_EMBED_TITLE", {
+                channel: name,
+            }),
         })
         .setDescription(desc);
 

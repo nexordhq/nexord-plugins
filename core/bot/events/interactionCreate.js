@@ -60,7 +60,10 @@ module.exports = async (interaction) => {
         if (context) await handleContext(interaction, context);
         else
             return interaction
-                .reply({ content: "An error has occurred", flags: MessageFlags.Ephemeral })
+                .reply({
+                    content: "An error has occurred",
+                    flags: MessageFlags.Ephemeral,
+                })
                 .catch(() => {});
     }
 };

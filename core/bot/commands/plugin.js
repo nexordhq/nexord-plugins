@@ -131,7 +131,9 @@ async function listPlugins({ client, guild }) {
             }),
         )
         .setFooter({
-            text: guild.getT("core:PLUGIN.LIST_EMBED_FOOTER", { count: plugins.length }),
+            text: guild.getT("core:PLUGIN.LIST_EMBED_FOOTER", {
+                count: plugins.length,
+            }),
         });
 
     return { embeds: [embed] };

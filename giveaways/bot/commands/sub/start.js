@@ -65,14 +65,18 @@ module.exports = async (member, giveawayChannel, duration, prize, winners, hostI
             messages: {
                 giveaway: guild.getT("giveaways:MESSAGES.giveaway"),
                 giveawayEnded: guild.getT("giveaways:MESSAGES.giveawayEnded"),
-                title: guild.getT("giveaways:MESSAGES.title", { prize: "{this.prize}" }),
+                title: guild.getT("giveaways:MESSAGES.title", {
+                    prize: "{this.prize}",
+                }),
                 inviteToParticipate: guild.getT("giveaways:MESSAGES.inviteToParticipate"),
                 winMessage: guild.getT("giveaways:MESSAGES.winMessage", {
                     winners: "{winners}",
                     prize: "{this.prize}",
                     messageURL: "{this.messageURL}",
                 }),
-                drawing: guild.getT("giveaways:MESSAGES.drawing", { timestamp: "{timestamp}" }),
+                drawing: guild.getT("giveaways:MESSAGES.drawing", {
+                    timestamp: "{timestamp}",
+                }),
                 dropMessage: "Be the first to react with 🎁 to win!",
                 embedFooter: guild.getT("giveaways:MESSAGES.embedFooter", {
                     winnerCount: "{this.winnerCount}",
@@ -94,7 +98,9 @@ module.exports = async (member, giveawayChannel, duration, prize, winners, hostI
         }
 
         await member.client.giveawaysManager.start(giveawayChannel, options);
-        return guild.getT("giveaways:START_SUCCESS", { channel: giveawayChannel.toString() });
+        return guild.getT("giveaways:START_SUCCESS", {
+            channel: giveawayChannel.toString(),
+        });
     } catch (error) {
         member.client.logger.error("Giveaway Start", error);
         return member.guild.getT("giveaways:START_ERROR");

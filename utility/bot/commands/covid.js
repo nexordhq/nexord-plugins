@@ -98,7 +98,9 @@ async function getCovid({ guild }, country) {
                 inline: true,
             },
         )
-        .setFooter({ text: guild.getT("utility:COVID.LAST_UPDATED", { date: mg }) });
+        .setFooter({
+            text: guild.getT("utility:COVID.LAST_UPDATED", { date: mg }),
+        });
 
     return { embeds: [embed] };
 }

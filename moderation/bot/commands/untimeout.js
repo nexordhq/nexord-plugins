@@ -59,12 +59,23 @@ async function untimeout(issuer, target, reason) {
 
     const response = await unTimeoutTarget(issuer, target, reason);
     if (typeof response === "boolean")
-        return guild.getT("moderation:UNTIMEOUT.SUCCESS", { target: target.user.username });
+        return guild.getT("moderation:UNTIMEOUT.SUCCESS", {
+            target: target.user.username,
+        });
     if (response === "BOT_PERM")
-        return guild.getT("moderation:UNTIMEOUT.BOT_PERM", { target: target.user.username });
+        return guild.getT("moderation:UNTIMEOUT.BOT_PERM", {
+            target: target.user.username,
+        });
     else if (response === "MEMBER_PERM")
-        return guild.getT("moderation:UNTIMEOUT.MEMBER_PERM", { target: target.user.username });
+        return guild.getT("moderation:UNTIMEOUT.MEMBER_PERM", {
+            target: target.user.username,
+        });
     else if (response === "NO_TIMEOUT")
-        return guild.getT("moderation:UNTIMEOUT.NO_TIMEOUT", { target: target.user.username });
-    else return guild.getT("moderation:UNTIMEOUT.NO_TIMEOUT", { target: target.user.username });
+        return guild.getT("moderation:UNTIMEOUT.NO_TIMEOUT", {
+            target: target.user.username,
+        });
+    else
+        return guild.getT("moderation:UNTIMEOUT.NO_TIMEOUT", {
+            target: target.user.username,
+        });
 }

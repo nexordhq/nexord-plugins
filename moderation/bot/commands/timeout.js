@@ -78,12 +78,23 @@ async function timeout(issuer, target, ms, reason) {
     if (isNaN(ms)) return guild.getT("moderation:TIMEOUT.INVALID_TIME");
     const response = await timeoutTarget(issuer, target, ms, reason);
     if (typeof response === "boolean")
-        return guild.getT("moderation:TIMEOUT.SUCCESS", { target: target.user.username });
+        return guild.getT("moderation:TIMEOUT.SUCCESS", {
+            target: target.user.username,
+        });
     if (response === "BOT_PERM")
-        return guild.getT("moderation:TIMEOUT.BOT_PERM", { target: target.user.username });
+        return guild.getT("moderation:TIMEOUT.BOT_PERM", {
+            target: target.user.username,
+        });
     else if (response === "MEMBER_PERM")
-        return guild.getT("moderation:TIMEOUT.MEMBER_PERM", { target: target.user.username });
+        return guild.getT("moderation:TIMEOUT.MEMBER_PERM", {
+            target: target.user.username,
+        });
     else if (response === "ALREADY_TIMEOUT")
-        return guild.getT("moderation:TIMEOUT.ALREADY_TIMEOUT", { target: target.user.username });
-    else return guild.getT("moderation:TIMEOUT.FAILED", { target: target.user.username });
+        return guild.getT("moderation:TIMEOUT.ALREADY_TIMEOUT", {
+            target: target.user.username,
+        });
+    else
+        return guild.getT("moderation:TIMEOUT.FAILED", {
+            target: target.user.username,
+        });
 }

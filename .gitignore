@@ -1,4 +1,6 @@
 node_modules
-.env
+
+# Lock files
 yarn.lock
-.repo_cache
+pnpm-lock.yaml
+package-lock.json

@@ -94,7 +94,10 @@ async function getMatchingBans(guild, match) {
             .addOptions(options),
     );
 
-    return { content: guild.getT("moderation:UNBAN.MENU_CONTENT"), components: [menuRow] };
+    return {
+        content: guild.getT("moderation:UNBAN.MENU_CONTENT"),
+        components: [menuRow],
+    };
 }
 
 /**

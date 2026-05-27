@@ -82,7 +82,10 @@ const buildGreeting = async (member, type, config, inviterData) => {
     if (config.embed.footer?.text) {
         const parsed = await parse(config.embed.footer.text, member, inviterData);
         if (parsed !== "") {
-            embed.setFooter({ text: parsed, iconURL: config.embed.footer.iconURL || null });
+            embed.setFooter({
+                text: parsed,
+                iconURL: config.embed.footer.iconURL || null,
+            });
             hasEmbed = true;
         }
     }
@@ -104,7 +107,11 @@ const buildGreeting = async (member, type, config, inviterData) => {
         config.embed.fields.length > 0
     ) {
         config.embed.fields.forEach((field) => {
-            embed.addFields({ name: field.name, value: field.value, inline: field.inline });
+            embed.addFields({
+                name: field.name,
+                value: field.value,
+                inline: field.inline,
+            });
         });
         hasEmbed = true;
     }

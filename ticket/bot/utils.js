@@ -124,7 +124,9 @@ async function closeTicket(channel, closedBy, reason) {
             const logChannel = guild.channels.cache.get(settings.log_channel);
             if (logChannel) {
                 const embed = new EmbedBuilder()
-                    .setAuthor({ name: guild.getT("ticket:HANDLER.CLOSE_LOG_EMBED_TITLE") })
+                    .setAuthor({
+                        name: guild.getT("ticket:HANDLER.CLOSE_LOG_EMBED_TITLE"),
+                    })
                     .setColor(settings.embed_colors.close)
                     .setFields([
                         {

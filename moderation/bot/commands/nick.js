@@ -100,10 +100,14 @@ module.exports = {
  */
 async function nickname({ member, guild }, target, name) {
     if (!canModerate(member, target)) {
-        return guild.getT("moderation:NICK.MEMBER_PERM", { user: target.user.username });
+        return guild.getT("moderation:NICK.MEMBER_PERM", {
+            user: target.user.username,
+        });
     }
     if (!canModerate(guild.members.me, target)) {
-        return guild.getT("moderation:NICK.BOT_PERM", { user: target.user.username });
+        return guild.getT("moderation:NICK.BOT_PERM", {
+            user: target.user.username,
+        });
     }
 
     try {
@@ -113,7 +117,9 @@ async function nickname({ member, guild }, target, name) {
                   target: target.user.username,
                   nickname: name,
               })
-            : guild.getT("moderation:NICK.RESET_SUCCESS", { target: target.user.username });
+            : guild.getT("moderation:NICK.RESET_SUCCESS", {
+                  target: target.user.username,
+              });
     } catch (ex) {
         return guild.getT(name ? "moderation:NICK.SET_FAIL" : "moderation:NICK.RESET_FAIL", {
             target: target.user.username,

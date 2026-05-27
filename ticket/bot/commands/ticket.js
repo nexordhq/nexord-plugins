@@ -304,7 +304,10 @@ async function ticketModalSetup(oriMsg, member, targetChannel) {
         .catch(() => {});
 
     if (!btnInteraction)
-        return sentMsg.edit({ content: guild.getT("ticket:TICKET.SETUP_TIMEOUT"), components: [] });
+        return sentMsg.edit({
+            content: guild.getT("ticket:TICKET.SETUP_TIMEOUT"),
+            components: [],
+        });
 
     // display modal
     await btnInteraction.showModal(
@@ -349,7 +352,10 @@ async function ticketModalSetup(oriMsg, member, targetChannel) {
         .catch(() => {});
 
     if (!modal)
-        return sentMsg.edit({ content: guild.getT("ticket:TICKET.SETUP_TIMEOUT"), components: [] });
+        return sentMsg.edit({
+            content: guild.getT("ticket:TICKET.SETUP_TIMEOUT"),
+            components: [],
+        });
 
     await modal.deferReply();
     const title =
@@ -376,7 +382,10 @@ async function ticketModalSetup(oriMsg, member, targetChannel) {
 
     await targetChannel.send({ embeds: [embed], components: [tktBtnRow] });
     await modal.deleteReply();
-    await sentMsg.edit({ content: guild.getT("ticket:TICKET.SETUP_DONE"), components: [] });
+    await sentMsg.edit({
+        content: guild.getT("ticket:TICKET.SETUP_DONE"),
+        components: [],
+    });
 }
 
 async function setupLogChannel(guild, target, settings) {

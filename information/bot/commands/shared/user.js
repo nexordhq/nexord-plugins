@@ -16,7 +16,9 @@ module.exports = (member) => {
 
     embed
         .setAuthor({
-            name: guild.getT("information:INFO.USER_EMBED_TITLE", { user: member.user.username }),
+            name: guild.getT("information:INFO.USER_EMBED_TITLE", {
+                user: member.user.username,
+            }),
             iconURL: member.user.displayAvatarURL(),
         })
         .setThumbnail(member.user.displayAvatarURL())
@@ -48,7 +50,9 @@ module.exports = (member) => {
                 value: member.user.displayAvatarURL({ extension: "png" }),
             },
         )
-        .setFooter({ text: guild.getT("REQUESTED_BY", { user: member.user.username }) })
+        .setFooter({
+            text: guild.getT("REQUESTED_BY", { user: member.user.username }),
+        })
         .setTimestamp(Date.now());
 
     return { embeds: [embed] };

@@ -111,7 +111,9 @@ async function viewReputation({ guild }, target) {
 
     const embed = EmbedUtils.embed()
         .setAuthor({
-            name: guild.getT("social:REP.VIEW_REP_TITLE", { target: target.username }),
+            name: guild.getT("social:REP.VIEW_REP_TITLE", {
+                target: target.username,
+            }),
         })
         .setThumbnail(target.displayAvatarURL())
         .addFields(

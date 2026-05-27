@@ -58,10 +58,16 @@ async function softban(issuer, target, reason) {
 
     const response = await softbanTarget(issuer, target, reason);
     if (typeof response === "boolean")
-        return guild.getT("moderation:SOFTBAN.SUCCESS", { target: target.username });
+        return guild.getT("moderation:SOFTBAN.SUCCESS", {
+            target: target.username,
+        });
     if (response === "BOT_PERM")
-        return guild.getT("moderation:SOFTBAN.BOT_PERM", { target: target.username });
+        return guild.getT("moderation:SOFTBAN.BOT_PERM", {
+            target: target.username,
+        });
     else if (response === "MEMBER_PERM")
-        return guild.getT("moderation:SOFTBAN.MEMBER_PERM", { target: target.username });
+        return guild.getT("moderation:SOFTBAN.MEMBER_PERM", {
+            target: target.username,
+        });
     else return guild.getT("moderation:SOFTBAN.FAILED", { target: target.username });
 }

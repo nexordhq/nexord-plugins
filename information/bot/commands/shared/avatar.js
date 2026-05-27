@@ -13,7 +13,11 @@ module.exports = (guild, user) => {
     const x2048 = user.displayAvatarURL({ extension: "png", size: 2048 });
 
     const embed = EmbedUtils.embed()
-        .setTitle(guild.getT("information:INFO.AVATAR_EMBED_TITLE", { user: user.username }))
+        .setTitle(
+            guild.getT("information:INFO.AVATAR_EMBED_TITLE", {
+                user: user.username,
+            }),
+        )
         .setImage(x256)
         .setDescription(
             `${guild.getT("information:INFO.AVATAR_EMBED_LINKS")}: • [x64](${x64}) ` +

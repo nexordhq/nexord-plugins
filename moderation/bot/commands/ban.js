@@ -64,6 +64,8 @@ async function ban(issuer, target, reason) {
     if (response === "BOT_PERM")
         return guild.getT("moderation:BAN.BOT_PERM", { target: target.username });
     else if (response === "MEMBER_PERM")
-        return guild.getT("moderation:BAN.MEMBER_PERM", { target: target.username });
+        return guild.getT("moderation:BAN.MEMBER_PERM", {
+            target: target.username,
+        });
     else return guild.getT("moderation:BAN.FAILED", { target: target.username });
 }

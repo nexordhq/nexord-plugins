@@ -88,7 +88,9 @@ module.exports = {
         if (sub === "coin") {
             const items = ["HEAD", "TAIL"];
             const toss = items[Math.floor(Math.random() * items.length)];
-            await interaction.followUp({ embeds: [firstEmbed(guild, interaction.user)] });
+            await interaction.followUp({
+                embeds: [firstEmbed(guild, interaction.user)],
+            });
 
             setTimeout(() => {
                 interaction.editReply({ embeds: [secondEmbed(guild)] }).catch(() => {});

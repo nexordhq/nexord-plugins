@@ -1,0 +1,16 @@
+{
+    "name": "nexord-plugins",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write '**/*.{js,json}'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.33.4",
+    "devDependencies": {
+        "prettier": "^3.8.3"
+    }
+}

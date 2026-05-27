@@ -76,10 +76,14 @@ module.exports = async (reaction, user) => {
     );
 
     const embed = EmbedUtils.embed()
-        .setAuthor({ name: message.guild.getT("translation:TR_EMBED_TITLE", { lng: src }) })
+        .setAuthor({
+            name: message.guild.getT("translation:TR_EMBED_TITLE", { lng: src }),
+        })
         .setDescription(desc)
         .setFooter({
-            text: message.guild.getT("translation:TR_EMBED_FOOTER", { user: user.username }),
+            text: message.guild.getT("translation:TR_EMBED_FOOTER", {
+                user: user.username,
+            }),
             iconURL: user.displayAvatarURL(),
         });
 

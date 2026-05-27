@@ -97,12 +97,16 @@ module.exports = {
 
         if (!response.success) return message.replyT("image:GEN_FAIL");
 
-        const attachment = new AttachmentBuilder(response.buffer, { name: "attachment.png" });
+        const attachment = new AttachmentBuilder(response.buffer, {
+            name: "attachment.png",
+        });
         const embed = new EmbedBuilder()
             .setColor(EMBED_COLOR)
             .setImage("attachment://attachment.png")
             .setFooter({
-                text: message.guild.getT("REQUESTED_BY", { user: message.author.username }),
+                text: message.guild.getT("REQUESTED_BY", {
+                    user: message.author.username,
+                }),
             });
 
         await message.reply({ embeds: [embed], files: [attachment] });
@@ -132,11 +136,15 @@ module.exports = {
 
         if (!response.success) return interaction.followUp(guild.getT("image:GEN_FAIL"));
 
-        const attachment = new AttachmentBuilder(response.buffer, { name: "attachment.png" });
+        const attachment = new AttachmentBuilder(response.buffer, {
+            name: "attachment.png",
+        });
         const embed = new EmbedBuilder()
             .setColor(EMBED_COLOR)
             .setImage("attachment://attachment.png")
-            .setFooter({ text: guild.getT("REQUESTED_BY", { user: author.username }) });
+            .setFooter({
+                text: guild.getT("REQUESTED_BY", { user: author.username }),
+            });
 
         await interaction.followUp({ embeds: [embed], files: [attachment] });
     },

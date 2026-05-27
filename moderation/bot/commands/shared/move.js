@@ -9,13 +9,19 @@ module.exports = async ({ guild, member }, target, reason, channel) => {
         });
     }
     if (response === "MEMBER_PERM") {
-        return guild.getT("moderation:VOICE.MOVE_MEMBER_PERM", { target: target.user.username });
+        return guild.getT("moderation:VOICE.MOVE_MEMBER_PERM", {
+            target: target.user.username,
+        });
     }
     if (response === "BOT_PERM") {
-        return guild.getT("moderation:VOICE.MOVE_BOT_PERM", { target: target.user.username });
+        return guild.getT("moderation:VOICE.MOVE_BOT_PERM", {
+            target: target.user.username,
+        });
     }
     if (response === "NO_VOICE") {
-        return guild.getT("moderation:VOICE.MOVE_NO_VOICE", { target: target.user.username });
+        return guild.getT("moderation:VOICE.MOVE_NO_VOICE", {
+            target: target.user.username,
+        });
     }
     if (response === "TARGET_PERM") {
         return guild.getT("moderation:VOICE.MOVE_TARGET_PERM", {
@@ -29,5 +35,8 @@ module.exports = async ({ guild, member }, target, reason, channel) => {
             channel,
         });
     }
-    return guild.getT("moderation:VOICE.MOVE_ERROR", { target: target.user.username, channel });
+    return guild.getT("moderation:VOICE.MOVE_ERROR", {
+        target: target.user.username,
+        channel,
+    });
 };

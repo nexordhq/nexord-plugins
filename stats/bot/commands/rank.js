@@ -77,6 +77,8 @@ async function getRank({ guild }, member) {
     });
     if (!response.success) return guild.getT("stats:RANK.API_ERROR");
 
-    const attachment = new AttachmentBuilder(response.buffer, { name: "rank.png" });
+    const attachment = new AttachmentBuilder(response.buffer, {
+        name: "rank.png",
+    });
     return { files: [attachment] };
 }

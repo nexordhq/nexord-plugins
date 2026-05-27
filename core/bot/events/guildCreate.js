@@ -14,7 +14,13 @@ module.exports = async (guild) => {
         {
             _id: guild.id,
         },
-        { $set: { _id: guild.id, guild_name: guild.name, joined_at: guild.joinedAt } },
+        {
+            $set: {
+                _id: guild.id,
+                guild_name: guild.name,
+                joined_at: guild.joinedAt,
+            },
+        },
         { upsert: true },
     );
 

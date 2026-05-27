@@ -54,10 +54,19 @@ async function warn(issuer, target, reason) {
 
     const response = await warnTarget(issuer, target, reason);
     if (typeof response === "boolean")
-        return guild.getT("moderation:WARN.SUCCESS", { target: target.user.username });
+        return guild.getT("moderation:WARN.SUCCESS", {
+            target: target.user.username,
+        });
     if (response === "BOT_PERM")
-        return guild.getT("moderation:WARN.BOT_PERM", { target: target.user.username });
+        return guild.getT("moderation:WARN.BOT_PERM", {
+            target: target.user.username,
+        });
     else if (response === "MEMBER_PERM")
-        return guild.getT("moderation:WARN.MEMBER_PERM", { target: target.user.username });
-    else return guild.getT("moderation:WARN.FAILED", { target: target.user.username });
+        return guild.getT("moderation:WARN.MEMBER_PERM", {
+            target: target.user.username,
+        });
+    else
+        return guild.getT("moderation:WARN.FAILED", {
+            target: target.user.username,
+        });
 }

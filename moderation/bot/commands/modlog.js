@@ -66,6 +66,8 @@ async function setChannel({ guild }, targetChannel) {
     await settings.save();
 
     return targetChannel
-        ? guild.getT("moderation:MODLOG.SUCCESS", { channel: targetChannel.toString() })
+        ? guild.getT("moderation:MODLOG.SUCCESS", {
+              channel: targetChannel.toString(),
+          })
         : guild.getT("moderation:MODLOG.DISABLED");
 }

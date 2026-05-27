@@ -61,7 +61,11 @@ module.exports = async (interaction) => {
         if (categories.length > 0) {
             const options = [];
             settings.categories.forEach((cat) =>
-                options.push({ label: cat.name, value: cat.name, description: cat.description }),
+                options.push({
+                    label: cat.name,
+                    value: cat.name,
+                    description: cat.description,
+                }),
             );
             const menuRow = new ActionRowBuilder().addComponents(
                 new StringSelectMenuBuilder()

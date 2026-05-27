@@ -370,7 +370,9 @@ async function setChannel(targetChannel, settings, guild) {
     settings.log_channel = targetChannel?.id;
     await settings.save();
     return targetChannel
-        ? guild.getT("automod:AUTOMOD.LOG_CHANNEL_SET", { channel: targetChannel.toString() })
+        ? guild.getT("automod:AUTOMOD.LOG_CHANNEL_SET", {
+              channel: targetChannel.toString(),
+          })
         : guild.getT("automod:AUTOMOD.LOG_CHANNEL_REMOVED");
 }
 
@@ -385,7 +387,9 @@ function getWhitelist(guild, settings) {
         if (channel) channels.push(channel.toString());
     }
 
-    return guild.getT("automod:AUTOMOD.WHITELIST_LIST", { channels: channels.join(", ") });
+    return guild.getT("automod:AUTOMOD.WHITELIST_LIST", {
+        channels: channels.join(", "),
+    });
 }
 
 async function whiteListAdd(settings, channelId, guild) {

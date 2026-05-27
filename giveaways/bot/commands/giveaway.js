@@ -369,7 +369,10 @@ async function runModalSetup({ member, channel, guild }, targetCh) {
         .catch(() => {});
 
     if (!btnInteraction)
-        return sentMsg.edit({ content: guild.getT("giveaways:START_NO_RESPONSE"), components: [] });
+        return sentMsg.edit({
+            content: guild.getT("giveaways:START_NO_RESPONSE"),
+            components: [],
+        });
 
     // display modal
     await btnInteraction.showModal(
@@ -429,7 +432,10 @@ async function runModalSetup({ member, channel, guild }, targetCh) {
         .catch(() => {});
 
     if (!modal)
-        return sentMsg.edit({ content: guild.getT("giveaways:START_NO_RESPONSE"), components: [] });
+        return sentMsg.edit({
+            content: guild.getT("giveaways:START_NO_RESPONSE"),
+            components: [],
+        });
 
     sentMsg.delete().catch(() => {});
     await modal.reply(guild.getT("giveaways:START_CREATING"));
@@ -480,7 +486,10 @@ async function runModalEdit(message, messageId) {
         .catch(() => {});
 
     if (!btnInteraction)
-        return sentMsg.edit({ content: guild.getT("giveaways:EDIT_NO_RESPONSE"), components: [] });
+        return sentMsg.edit({
+            content: guild.getT("giveaways:EDIT_NO_RESPONSE"),
+            components: [],
+        });
 
     // display modal
     await btnInteraction.showModal(
@@ -526,7 +535,10 @@ async function runModalEdit(message, messageId) {
         .catch(() => {});
 
     if (!modal)
-        return sentMsg.edit({ content: guild.getT("giveaways:EDIT_NO_RESPONSE"), components: [] });
+        return sentMsg.edit({
+            content: guild.getT("giveaways:EDIT_NO_RESPONSE"),
+            components: [],
+        });
 
     sentMsg.delete().catch(() => {});
     await modal.reply(guild.getT("giveaways:EDIT_CREATING"));

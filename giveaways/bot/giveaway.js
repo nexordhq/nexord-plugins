@@ -28,7 +28,9 @@ class MongooseGiveaways extends GiveawaysManager {
     }
 
     async editGiveaway(messageId, giveawayData) {
-        await this.Model.updateOne({ messageId }, giveawayData, { omitUndefined: true }).exec();
+        await this.Model.updateOne({ messageId }, giveawayData, {
+            omitUndefined: true,
+        }).exec();
         return true;
     }
 

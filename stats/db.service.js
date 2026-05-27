@@ -102,7 +102,10 @@ class StatsService extends DBService {
                 : Model.hydrate(JSON.parse(cached));
         }
 
-        let member = await Model.findOne({ guild_id: guildId, member_id: memberId });
+        let member = await Model.findOne({
+            guild_id: guildId,
+            member_id: memberId,
+        });
         await this.cache(key, member);
         return member || new Model({ guild_id: guildId, member_id: memberId });
     }
