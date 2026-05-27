@@ -5,5 +5,4 @@ module.exports = new DashboardPlugin({
     dependencies: [],
     baseDir: __dirname,
     dashboardRouter: require("./router"),
-    dbService: require("../db.service"),
 });

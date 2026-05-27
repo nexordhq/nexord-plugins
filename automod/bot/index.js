@@ -7,6 +7,4 @@ module.exports = new BotPlugin({
     onEnable: (_client) => {
         cleanupCache();
     },
-
-    dbService: require("../db.service"),
 });

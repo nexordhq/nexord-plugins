@@ -5,5 +5,4 @@ module.exports = new DashboardPlugin({
     icon: "fa-solid fa-star",
     dashboardRouter: require("./settings.router"),
     adminRouter: require("./admin.router"),
-    dbService: require("../db.service"),
 });

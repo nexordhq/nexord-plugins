@@ -4,7 +4,6 @@ module.exports = new BotPlugin({
     baseDir: __dirname,
     dependencies: [],
     ownerOnly: true,
-    dbService: require("../db.service"),
 
     onEnable: async (_client) => {},
 

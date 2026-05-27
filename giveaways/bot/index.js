@@ -7,6 +7,4 @@ module.exports = new BotPlugin({
     onEnable: (client) => {
         client.giveawaysManager = require("./giveaway")(client);
     },
-
-    dbService: require("../db.service"),
 });
